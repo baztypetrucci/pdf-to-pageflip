@@ -1,0 +1,136 @@
+@font-face {
+	font-family: 'BebasNeueRegular';
+	src: url('../verano-2013/fonts/BebasNeue-webfont.eot');
+	src: url('../verano-2013/fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'), url('../verano-2013/fonts/BebasNeue-webfont.woff') format('woff'), url('../verano-2013/fonts/BebasNeue-webfont.ttf') format('truetype'), url('../verano-2013/fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.wowbook {
+	color: #333;
+}
+.wowbook-page-content {
+	background: white;
+}
+.wowbook-left .wowbook-gutter-shadow {
+	background-image: url('../verano-2013/images/page_left_background.png');
+	opacity: 0.5;
+	width: 60px;
+}
+.wowbook-right .wowbook-gutter-shadow {
+	background-image: url('../verano-2013/images/page_right_background.png');
+	background-position: 0 0;
+	width: 75px;
+}
+body {
+	color: black;
+	background: #ffffff url("../verano-2013/images/fondos-el-cielo-de-verano.jpg");
+	background-position: 50% top;
+}
+a, a:active, a:visited {
+	text-decoration: none;
+}
+#container {
+	width: 1200px;
+	margin: auto;
+	padding-top: 3em;
+}
+h1, h2 {
+	font-size: 32px;
+	font-weight: normal;
+	font-family: 'News Cycle', sans-serif;
+	text-shadow: 0 1px 0 rgba(10, 10, 10, 0.5);
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+h2 {
+	font-size: 24px;
+	margin-bottom: 0.5em;
+}
+nav {
+	height: 46px;
+	position: relative;
+	z-index: 2147483647;
+}
+nav a {
+	display: inline-block;
+	height: 46px;
+	width: 48px;
+	padding: 0;
+	background-position: 8px 7px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	background-color: #B81822;
+	background-repeat: no-repeat;
+}
+nav #zoomin {
+	background-image: url(../images/icons/zoom_in.png);
+}
+nav #zoomout {
+	background-image: url(../images/icons/zoom_out.png);
+}
+nav #first {
+	background-image: url(../images/icons/arrow_double_left.png);
+}
+nav #last {
+	background-image: url(../images/icons/arrow_double_right.png);
+}
+nav #next {
+	background-image: url(../images/icons/arrow_right.png);
+}
+nav #back {
+	background-image: url(../images/icons/arrow_left.png);
+}
+nav #slideshow {
+	background-image: url(../images/icons/slideshow_play.png);
+}
+nav #slideshow.wowbook-disabled {
+	background-image: url(../images/icons/slideshow_pause.png);
+}
+nav a:hover {
+	background-color: #7D0115;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #f0f0f0));
+	background-image: -webkit-linear-gradient(top, #555555, #222222);
+	background-image: -moz-linear-gradient(top, #555555, #222222);
+	background-image: -ms-linear-gradient(top, #555555, #222222);
+	background-image: -o-linear-gradient(top, #555555, #222222);
+	background-image: linear-gradient(top, #555555, #222222);
+}
+nav a:active, nav a:hover, nav a {
+	outline: none;
+}
+.wowbook-page-content {
+	padding: 1em;
+}
+#main {
+	position: relative;
+}
+#click_to_open {
+	position: absolute;
+	left: 110px;
+	top: 280px;
+}
+.js #features {
+	mmargin-left: -12000px;
+}
+#features {
+	mmargin: auto;
+}
+#cover {
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.feature {
+	padding: 1em 1em;
+	font-family: 'BebasNeueRegular', sans-serif;
+	height: 500px;
+	width: 356px;
+	background: white;
+}
+#features .feature {
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 100%;
+}
