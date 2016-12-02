@@ -87,7 +87,7 @@ Remove this if you use the .htaccess -->
 					if($k === 0){
 						echo "<div id='cover' style=\"background-image:url(originales/".$v.")\"></div>";
 					}else{
-						echo "<div class='feature pag".$k."' style=\"background-image:url(originales/".$v.")\"></div>\n";
+						echo "<div class='feature pag".$k."' style=\"background-image:url('originales/".$v."')\"></div>\n";
 					}
 				}
 				?>

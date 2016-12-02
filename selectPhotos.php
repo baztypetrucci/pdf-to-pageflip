@@ -88,19 +88,6 @@ foreach ($archivosSubidos as $k => $v) {
 	//Copiando la base del pageflip a la carpeta
 	recurse_copy("base-pageflip/", "$delpath/$original_name");
 
-	//Creando el archivo HTML listo
-
-
-
-
-
-
-
-
-
-
-
-
 
 	//ZipArchive
 	// Get real path for our folder
@@ -143,20 +130,6 @@ foreach ($archivosSubidos as $k => $v) {
 	fwrite($outputHtml, $htmlStr);
 	fclose($outputHtml);
 	$zip->addFile($rutaArchivo, 'Pageflip.html');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	// Zip archive will be created only after closing object
 	$zip->close();

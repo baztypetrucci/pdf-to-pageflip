@@ -37,9 +37,12 @@ foreach ($_FILES as $k => $v) {
 		//echo "El archivo no pudo ser procesado";
 		// if everything is ok, try to upload file
 	} else {
-		if (move_uploaded_file($tmp_name, "$target_dir/$imageFileName.$imageFileType")) {
+		$textSearch = array('ñ','á','é','í','ó','ú','Á','É','Í','Ó','Ú','Ñ',' ');
+		$arrayReplace = array('n','a','e','i','o','u','A','E','I','O','U','N','-');
+		$nuevoNombre = str_replace($textSearch,$arrayReplace,$imageFileName);
+		if (move_uploaded_file($tmp_name, "$target_dir/$nuevoNombre.$imageFileType")) {
 			//echo "El archivo ". basename( $v["name"]). " fue cargado.";
-			$archivosSubidos[$k] = "$target_dir/$imageFileName.$imageFileType";
+			$archivosSubidos[$k] = "$target_dir/$nuevoNombre.$imageFileType";
 		} else {
 			//echo "Hubo un eror al subir el archivo";
 		}
