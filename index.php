@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="assets/css/styles.css">
 	<script	src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="	crossorigin="anonymous"></script>
 	<script src="assets/js/baztyFooter.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
 <body class="bs-docs-home">
@@ -28,7 +29,7 @@
 									<label for="original">
 										Selecciona un archivo PDF para transformarlo en Pageflip
 									</label>
-									<input type="file" name="original" id="original" class="form-control">
+									<input type="file" name="original" id="original" class="form-control" data-error="Debes seleccionar un archivo PDF" required>
 								</div>
 							</div>
 						</div>
@@ -51,10 +52,17 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-12">
+							<div class="col-md-6">
 								<div class="checkbox">
 									<label>
-										<input type="checkbox" id="primera_pagina" name="primera_pagina"> ¿La primera cuartilla es la última página?
+										<input type="checkbox" id="primera_pagina" name="primera_pagina"> ¿La primera cuartilla es la última p&aacute;gina?
+									</label>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" id="paginas_dobles" name="paginas_dobles"> ¿Dos hojas por p&aacute;gina?
 									</label>
 								</div>
 							</div>

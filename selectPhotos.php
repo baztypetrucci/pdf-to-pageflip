@@ -3,6 +3,8 @@ require_once 'uploader.php';
 $delpath = "uploads/cropped";
 $ancho = (float)$_POST["ancho"];
 $alto = (float)$_POST["alto"];
+$paginas_dobles = $_POST["paginas_dobles"];
+
 if($ancho<=0 && $alto<=0){
 	$ancho = 1200;
 	$alto = 432;
@@ -51,7 +53,9 @@ foreach ($archivosSubidos as $k => $v) {
 		$im->previousImage();
 		$im->scaleImage($ancho, $alto, true);
 		//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
-		$im->cropImage($ancho/2,$alto,$ancho/2,0);
+		if(!isset($paginas_dobles)){
+			$im->cropImage($ancho/2,$alto,0,0);
+		}
 		//Se crean y guardan las imagenes para este corte
 		$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'2.jpg');
 		$num_pages--;
