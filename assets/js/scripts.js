@@ -11,4 +11,9 @@ $(document).ready(function(){
 		} else {
 			$(this).submit();
 		}
+	});
+	$('.background-loader, .loaderGif').hide();
+	$('#formUploader').submit(function(e){
+		$('.background-loader, .loaderGif').fadeIn(500);
+	});
 });
