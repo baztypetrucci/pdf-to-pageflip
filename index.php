@@ -81,6 +81,10 @@
 			<p class="version">1 de Diciembre, V.0.0.1</p>
 		</div>
 	</footer>
+	<div class="loaderGif">
+		<img src="assets/images/gears-loader.gif" alt="">
+	</div>
+	<div class="background-loader"></div>
 
 </body>
 </html>
