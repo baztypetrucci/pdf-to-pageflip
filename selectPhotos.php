@@ -79,7 +79,7 @@ foreach ($archivosSubidos as $k => $v) {
 			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
 			$im->cropImage($ancho,$alto,0,0);
 			//Se crean y guardan las imagenes para este corte
-			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'-'.$i'.jpg');
+			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'-'.$i.'.jpg');
 		}
 		//SE LIMPIA EL OBJETO
 		$im->clear();
