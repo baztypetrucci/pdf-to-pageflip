@@ -20,16 +20,17 @@ foreach ($archivosSubidos as $k => $v) {
 	$finalFolderImages = "$delpath/$original_name/originales";
 	mkdir("$finalFolderImages",0755,true);
 
-	$im = new Imagick();
-	//PRIMERA PÁGINA
-	// DPI
-	$im->setResolution(100,100);
-	$im->readImage($archivo);
-	$im->setImageFormat("jpg");
-	$im->setImageBackgroundColor('white');
-	$num_pages = $im->getNumberImages();
+
 	//Tamaño final, true es para no deformar la imagen
 	if(!isset($paginas_dobles)){
+		$im = new Imagick();
+		//PRIMERA PÁGINA
+		// DPI
+		$im->setResolution(100,100);
+		$im->readImage($archivo);
+		$im->setImageFormat("jpg");
+		$im->setImageBackgroundColor('white');
+		$num_pages = $im->getNumberImages();
 		for ($i=0; $i < $num_pages; $i++) {
 			$im->previousImage();
 			$im->scaleImage($ancho, $alto, true);
@@ -60,6 +61,14 @@ foreach ($archivosSubidos as $k => $v) {
 		}
 		$im->clear();
 	}else{
+		$im = new Imagick();
+		//PRIMERA PÁGINA
+		// DPI
+		$im->setResolution(100,100);
+		$im->readImage($archivo);
+		$im->setImageFormat("jpg");
+		$im->setImageBackgroundColor('white');
+		$num_pages = $im->getNumberImages();
 		for ($i=0; $i < $num_pages; $i++) {
 			$im->previousImage();
 			$im->scaleImage($ancho, $alto, true);
