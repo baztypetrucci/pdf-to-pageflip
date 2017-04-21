@@ -29,6 +29,8 @@ foreach ($archivosSubidos as $k => $v) {
 	$im->setImageFormat("jpg");
 	$im->setImageBackgroundColor('white');
 	$num_pages = $im->getNumberImages();
+	print_r($num_pages);
+	die;
 	//Tamaño final, true es para no deformar la imagen
 	for ($i=0; $i < $im->getNumberImages(); $i++) {
 		$im->previousImage();
