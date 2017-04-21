@@ -39,7 +39,7 @@ foreach ($archivosSubidos as $k => $v) {
 			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
 			$im->cropImage($ancho/2,$alto,0,0);
 			//Se crean y guardan las imagenes para este corte
-			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'1.jpg');
+			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'-'.$i.'1.jpg');
 			$num_pages--;
 		}
 		//SE LIMPIA EL OBJETO
@@ -59,7 +59,7 @@ foreach ($archivosSubidos as $k => $v) {
 			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
 			$im->cropImage($ancho/2,$alto,$ancho/2,0);
 			//Se crean y guardan las imagenes para este corte
-			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'2.jpg');
+			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'-'.$i.'2.jpg');
 			$num_pages--;
 		}
 		$im->clear();
@@ -79,7 +79,7 @@ foreach ($archivosSubidos as $k => $v) {
 			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
 			$im->cropImage($ancho,$alto,0,0);
 			//Se crean y guardan las imagenes para este corte
-			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'-1.jpg');
+			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'-'.$i'.jpg');
 		}
 		//SE LIMPIA EL OBJETO
 		$im->clear();
