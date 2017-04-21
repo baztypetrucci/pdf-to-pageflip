@@ -69,6 +69,7 @@ foreach ($archivosSubidos as $k => $v) {
 		$im->readImage($archivo);
 		$im->setImageFormat("jpg");
 		$im->setImageBackgroundColor('white');
+		$im->setImageResolution(100,100);
 		$num_pages = $im->getNumberImages();
 		for ($i=0; $i < $num_pages; $i++) {
 			$im->previousImage();
