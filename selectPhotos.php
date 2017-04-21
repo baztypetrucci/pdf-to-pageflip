@@ -29,39 +29,49 @@ foreach ($archivosSubidos as $k => $v) {
 	$im->setImageBackgroundColor('white');
 	$num_pages = $im->getNumberImages();
 	//Tamaño final, true es para no deformar la imagen
-	for ($i=0; $i < $num_pagesi; $i++) {
-		$im->previousImage();
-		$im->scaleImage($ancho, $alto, true);
-		//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
-		if(!isset($paginas_dobles)){
+	if(!isset($paginas_dobles)){
+		for ($i=0; $i < $num_pages; $i++) {
+			$im->previousImage();
+			$im->scaleImage($ancho, $alto, true);
+			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
 			$im->cropImage($ancho/2,$alto,0,0);
+			//Se crean y guardan las imagenes para este corte
+			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'1.jpg');
+			$num_pages--;
 		}
-		//Se crean y guardan las imagenes para este corte
-		$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'1.jpg');
-		$num_pages--;
-	}
-	//SE LIMPIA EL OBJETO
-	$im->clear();
-	//SEGUNDA PÁGINA
-	// DPI
-	$im->setResolution(100,100);
-	$im->readImage($archivo);
-	$im->setImageFormat("jpg");
-	$im->setImageBackgroundColor('white');
-	//$num_pages = $im->getNumberImages();
-	//Tamaño final, true es para no deformar la imagen
-	for ($i=0; $i < num_pages; $i++) {
-		$im->previousImage();
-		$im->scaleImage($ancho, $alto, true);
-		//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
-		if(!isset($paginas_dobles)){
-			$im->cropImage($ancho/2,$alto,0,0);
+		//SE LIMPIA EL OBJETO
+		$im->clear();
+		//SEGUNDA PÁGINA
+		// DPI
+		$im->setResolution(100,100);
+		$im->readImage($archivo);
+		$im->setImageFormat("jpg");
+		$im->setImageBackgroundColor('white');
+		//$num_pages = $im->getNumberImages();
+		//Tamaño final, true es para no deformar la imagen
+		for ($i=0; $i < $num_pages; $i++) {
+			$im->previousImage();
+			$im->scaleImage($ancho, $alto, true);
+			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
+			$im->cropImage($ancho/2,$alto,$ancho/2,0);
+			//Se crean y guardan las imagenes para este corte
+			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'2.jpg');
+			$num_pages--;
 		}
-		//Se crean y guardan las imagenes para este corte
-		$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'2.jpg');
-		$num_pages--;
+		$im->clear();
+	}else{
+		for ($i=0; $i < $num_pages; $i++) {
+			$im->previousImage();
+			$im->scaleImage($ancho, $alto, true);
+			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
+			$im->cropImage($ancho,$alto,0,0);
+			//Se crean y guardan las imagenes para este corte
+			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'.jpg');
+			$num_pages--;
+		}
+		//SE LIMPIA EL OBJETO
+		$im->clear();
 	}
-	$im->clear();
 
 	if(isset($_POST["primera_pagina"])){
 		$directorio = scandir($finalFolderImages);
