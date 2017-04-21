@@ -6,13 +6,11 @@ $(document).ready(function(){
 		delta:200
 	});
 	$('.background-loader, .loaderGif').hide();
-	$('#formUploader').submit(function(e){
-		$('.background-loader, .loaderGif').fadeIn(500);
-	});
 	$('form').validator().on('submit', function (e) {
 		if (e.isDefaultPrevented()) {
 			// handle the invalid form...
 		} else {
+			$('.background-loader, .loaderGif').fadeIn(500);
 			$(this).submit();
 		}
 	});
