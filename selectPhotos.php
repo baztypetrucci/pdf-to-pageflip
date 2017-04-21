@@ -22,6 +22,8 @@ foreach ($archivosSubidos as $k => $v) {
 
 
 	//Tamaño final, true es para no deformar la imagen
+	echo $paginas_dobles;
+	die;
 	if(!isset($paginas_dobles)){
 		$im = new Imagick();
 		//PRIMERA PÁGINA
