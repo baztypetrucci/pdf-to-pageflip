@@ -175,6 +175,10 @@ foreach ($archivosSubidos as $k => $v) {
 	<script src="assets/js/scripts.js"></script>
 </head>
 <body class="bs-docs-home">
+	<audio autoplay>
+		<source src="assets/Music/check.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
 
 	<div class="bs-docs-header">
 		<div class="container">
