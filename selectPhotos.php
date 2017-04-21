@@ -208,7 +208,7 @@ foreach ($archivosSubidos as $k => $v) {
 	<footer class="bs-docs-footer">
 		<div class="container">
 			<p>Hecho por Bastián Hidalgo</p>
-			<p style="text-decoration: line-through;" class="version">21 de Abril, V.1.0.0</p>
+			<p style="" class="version">21 de Abril, V.1.0.0</p>
 			<p style="text-decoration: line-through; font-size:.7em;" class="version">1 de Diciembre, V.0.0.1</p>
 		</div>
 	</footer>
