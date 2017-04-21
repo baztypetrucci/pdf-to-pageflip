@@ -34,7 +34,7 @@ foreach ($archivosSubidos as $k => $v) {
 		$im->setImageBackgroundColor('white');
 		$num_pages = $im->getNumberImages();
 		for ($i=0; $i < $num_pages; $i++) {
-			//$im->previousImage();
+			$im->previousImage();
 			$im->scaleImage($ancho, $alto, true);
 			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
 			$im->cropImage($ancho/2,$alto,0,0);
@@ -53,7 +53,7 @@ foreach ($archivosSubidos as $k => $v) {
 		//$num_pages = $im->getNumberImages();
 		//Tamaño final, true es para no deformar la imagen
 		for ($i=0; $i < $num_pages; $i++) {
-			//$im->previousImage();
+			$im->previousImage();
 			$im->scaleImage($ancho, $alto, true);
 			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
 			$im->cropImage($ancho/2,$alto,$ancho/2,0);
@@ -72,7 +72,7 @@ foreach ($archivosSubidos as $k => $v) {
 		$im->setImageBackgroundColor('white');
 		$num_pages = $im->getNumberImages();
 		for ($i=0; $i < $num_pages; $i++) {
-			//$im->previousImage();
+			$im->previousImage();
 			$im->scaleImage($ancho, $alto, true);
 			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
 			$im->cropImage($ancho,$alto,0,0);
