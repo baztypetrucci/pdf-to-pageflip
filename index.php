@@ -3,7 +3,7 @@
 <head>
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/docs.css">
-	<script	src="assets/js/jquery-1.8.3.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="	crossorigin="anonymous"></script>
+	<script	src="assets/js/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="	crossorigin="anonymous"></script>
 	<script src="assets/js/baztyFooter.min.js"></script>
 	<script src="assets/js/validator.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
