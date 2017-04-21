@@ -22,7 +22,12 @@ foreach ($archivosSubidos as $k => $v) {
 
 
 	//Tamaño final, true es para no deformar la imagen
-	echo $paginas_dobles;
+
+	if(!isset($paginas_dobles)){
+		echo "es pagina doble"
+	}else{
+		echo "No son pagina doble"
+	}
 	die;
 	if(!isset($paginas_dobles)){
 		$im = new Imagick();
