@@ -70,13 +70,15 @@ foreach ($archivosSubidos as $k => $v) {
 		$im->setImageFormat("jpg");
 		$im->setImageBackgroundColor('white');
 		$num_pages = $im->getNumberImages();
+		print_r($num_pages);
+		die;
 		for ($i=0; $i < $num_pages; $i++) {
 			$im->previousImage();
 			$im->scaleImage($ancho, $alto, true);
 			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
 			$im->cropImage($ancho,$alto,0,0);
 			//Se crean y guardan las imagenes para este corte
-			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'.jpg');
+			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'-1.jpg');
 			$num_pages--;
 		}
 		//SE LIMPIA EL OBJETO
