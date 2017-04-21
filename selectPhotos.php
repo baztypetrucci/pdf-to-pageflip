@@ -29,6 +29,7 @@ foreach ($archivosSubidos as $k => $v) {
 		// DPI
 		$im->setResolution(100,100);
 		$im->readImage($archivo);
+		$im->setImageResolution(100,100);
 		$im->setImageFormat("jpg");
 		$im->setImageBackgroundColor('white');
 		$num_pages = $im->getNumberImages();
@@ -47,6 +48,7 @@ foreach ($archivosSubidos as $k => $v) {
 		// DPI
 		$im->setResolution(100,100);
 		$im->readImage($archivo);
+		$im->setImageResolution(100,100);
 		$im->setImageFormat("jpg");
 		$im->setImageBackgroundColor('white');
 		//$num_pages = $im->getNumberImages();
@@ -67,9 +69,9 @@ foreach ($archivosSubidos as $k => $v) {
 		// DPI
 		$im->setResolution(100,100);
 		$im->readImage($archivo);
+		$im->setImageResolution(100,100);
 		$im->setImageFormat("jpg");
 		$im->setImageBackgroundColor('white');
-		$im->setImageResolution(100,100);
 		$num_pages = $im->getNumberImages();
 		for ($i=0; $i < $num_pages; $i++) {
 			$im->previousImage();
