@@ -33,13 +33,14 @@ foreach ($archivosSubidos as $k => $v) {
 		$im->setImageFormat("jpg");
 		$im->setImageBackgroundColor('white');
 		$num_pages = $im->getNumberImages();
+		$reversePageNumber = $num_pages;
 		for ($i=0; $i < $num_pages; $i++) {
 			$im->previousImage();
 			$im->scaleImage($ancho, $alto, true);
 			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
 			$im->cropImage($ancho/2,$alto,0,0);
 			//Se crean y guardan las imagenes para este corte
-			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$i.'-1.jpg');
+			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$reversePageNumber--.'-1.jpg');
 		}
 		//SE LIMPIA EL OBJETO
 		$im->clear();
@@ -50,6 +51,7 @@ foreach ($archivosSubidos as $k => $v) {
 		$im->setImageResolution(100,100);
 		$im->setImageFormat("jpg");
 		$im->setImageBackgroundColor('white');
+		$reversePageNumber = $num_pages;
 		//$num_pages = $im->getNumberImages();
 		//Tamaño final, true es para no deformar la imagen
 		for ($i=0; $i < $num_pages; $i++) {
@@ -58,7 +60,7 @@ foreach ($archivosSubidos as $k => $v) {
 			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
 			$im->cropImage($ancho/2,$alto,$ancho/2,0);
 			//Se crean y guardan las imagenes para este corte
-			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$i.'-2.jpg');
+			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$reversePageNumber--.'-2.jpg');
 		}
 		$im->clear();
 	}else{
@@ -71,13 +73,14 @@ foreach ($archivosSubidos as $k => $v) {
 		$im->setImageFormat("jpg");
 		$im->setImageBackgroundColor('white');
 		$num_pages = $im->getNumberImages();
+		$reversePageNumber = $num_pages;
 		for ($i=0; $i < $num_pages; $i++) {
 			$im->previousImage();
 			$im->scaleImage($ancho, $alto, true);
 			//Primer corte de 600 de ancho por 432 de alto en la posicion x=0, y=0
 			$im->cropImage($ancho,$alto,0,0);
 			//Se crean y guardan las imagenes para este corte
-			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$i.'.jpg');
+			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$reversePageNumber--.'.jpg');
 		}
 		//SE LIMPIA EL OBJETO
 		$im->clear();
