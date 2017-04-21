@@ -70,8 +70,6 @@ foreach ($archivosSubidos as $k => $v) {
 		$im->setImageFormat("jpg");
 		$im->setImageBackgroundColor('white');
 		$num_pages = $im->getNumberImages();
-		print_r($num_pages);
-		die;
 		for ($i=0; $i < $num_pages; $i++) {
 			$im->previousImage();
 			$im->scaleImage($ancho, $alto, true);
