@@ -80,7 +80,6 @@ foreach ($archivosSubidos as $k => $v) {
 			$im->cropImage($ancho,$alto,0,0);
 			//Se crean y guardan las imagenes para este corte
 			$im->writeImage($finalFolderImages.'/'.$original_name.'-'.$num_pages.'-1.jpg');
-			$num_pages--;
 		}
 		//SE LIMPIA EL OBJETO
 		$im->clear();
